@@ -18,7 +18,6 @@ There is also a good blog article at [The Postulate](https://thepostulate.com/co
 
 Again, since our source can use either format of the ISBN, there are no plans at this time to implement the routine as PowerShell code.
 
-
 ## Data Source
 
 In this module, we will use the [OpenLibrary.org](https://OpenLibrary.org) API to get our data. The OpenLibrary website is run by the Internet Archive.
