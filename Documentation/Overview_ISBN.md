@@ -58,6 +58,13 @@ For this module I've created some sample data you can use for testing. The [Samp
 
 The file [Sample_Data_ISBN_Small.csv](Sample_Data_ISBN_Small.csv) has only the ISBNs stored as a CSV (Comma Separated Values) file.
 
+## Conclusion
+
+In this document we.... Understanding this information is important when we integrate the call into our PowerShell code.
+
+Return to the [Overview](Overview.md).
+Return to the root [ReadMe](./../README.md)
+
 ---
 
 ## Author Information

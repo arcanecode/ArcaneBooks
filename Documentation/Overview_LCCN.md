@@ -62,12 +62,17 @@ The final parameter is `recordSchema=mods`. The API supports several formats.
 
 You are welcome to experiment with different formats, but for this module we'll be using `mods`. It provides the most information, and is in XML. XML is very easy to read, and it works great with PowerShell.
 
-
 ## ISBN and Library of Congress
 
 It is possible to use the Library of Congress to look up the ISBN. In my testing though, the interface provided by OpenLibrary provided more data. Thus we'll be using it for looking up ISBNs in this module.
 
 You can read more about ISBNs in the file [Overview_ISBN.md](Overview_ISBN.md).
+
+## Sample Data
+
+For this module I've created some sample data you can use for testing. The [Sample_Data_Verification.md](Sample_Data_Verification.md) file has lists for both ISBN and LCCN data along with the book title they correspond to.
+
+The file [Sample_Data_LCCN_Small.csv](Sample_Data_LCCN_Small.csv) has only the ISBNs stored as a CSV (Comma Separated Values) file.
 
 ## Conclusion
 
@@ -75,3 +80,29 @@ In this document we covered the basics of the LCCN as well as the web API provid
 
 Return to the [Overview](Overview.md).
 Return to the root [ReadMe](./../README.md)
+
+---
+
+## Author Information
+
+### Author
+
+Robert C. Cain | [@ArcaneCode](https://twitter.com/arcanecode) | arcanecode@gmail.com
+
+### Websites
+
+About Me: [http://arcanecode.me](http://arcanecode.me)
+
+Blog: [http://arcanecode.com](http://arcanecode.com)
+
+Github: [http://arcanerepo.com](http://arcanerepo.com)
+
+LinkedIn: [http://arcanecode.in](http://arcanecode.in)
+
+### Copyright Notice
+
+This document is Copyright (c) 2023 Robert C. Cain. All rights reserved.
+
+The code samples herein is for demonstration purposes. No warranty or guarantee is implied or expressly granted.
+
+This document may not be reproduced in whole or in part without the express written consent of the author and/or Pluralsight. Information within can be used within your own projects.
