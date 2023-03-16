@@ -1,0 +1,46 @@
+
+
+ArcaneBooks Module
+
+Description
+
+    This module is designed to return book metadata from either the ISBN number
+    or the LCCN number.
+
+---
+
+ArcaneBooks Cmdlets
+
+Show-AboutArcaneBooks : https://github.com/arcanecode/ArcaneBooks/blob/master/Documentation/Show-AboutArcaneBooks.md
+
+    Displays information about the ArcaneBooks module, with links to find out more info.
+
+Show-ArcaneBooksFunctions : https://github.com/arcanecode/ArcaneBooks/blob/master/Documentation/Show-ArcaneBooksFunctions.md
+
+    Displays a list of all the functions in the ArcaneBooks, along with a synopsis of their purpose.
+
+---
+
+Author Information
+
+    Author: Robert C. Cain | @ArcaneCode : https://twitter.com/arcanecode) | arcanecode@gmail.com
+
+    Websites
+
+    About Me: http://arcanecode.me
+
+    Blog: http://arcanecode.com
+
+    Github: http://arcanerepo.com
+
+    LinkedIn: http://arcanecode.in
+
+Copyright Notice
+
+    This document is Copyright (c) 2023 Robert C. Cain. All rights reserved.
+
+    The code samples herein is for demonstration purposes. No warranty or guarantee is implied or expressly granted.
+
+    This document may not be reproduced in whole or in part without the express written consent of the author and/or Pluralsight. Information within can be used within your own projects.
+
+
