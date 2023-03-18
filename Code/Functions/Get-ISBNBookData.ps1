@@ -17,10 +17,12 @@ function Get-ISBNBookData()
       $book = [ISBNBook]::new()
 
       Write-Verbose "Getting the book data for ISBN $ISBN"
-      $book.GetISBNBookData($ISBN)
+      $retCode = $book.GetISBNBookData($ISBN)
+Write-Verbose "Return Code $retCode"
+      Write-Verbose "Fetched Data for $($book.ISBN10) - $($book.Title)"
     }
 
-    Write-Verbose 'Returning the book object to you'
+    Write-Verbose "Returning the book object to you"
     return $book
 
   }

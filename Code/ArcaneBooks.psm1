@@ -24,88 +24,145 @@ class ISBNBook
     [string] $NumberOfPages
     [string] $Publishers
     [string] $PublishDate
-    [string] $CreatedDate
-    [string] $LastModifiedDate
     [string] $PublisherLocation
-    #[string] $Contributors
-    [string] $EditionName
     [string] $Subject
-    [string] $RevisionNumber
-    [string] $LatestRevisionNumber
+    [string] $LibraryOfCongressClassification
+    [string] $DeweyDecimalClass
     [string] $Notes
+    [string] $CoverUrlSmall
+    [string] $CoverUrlMedium
+    [string] $CoverUrlLarge
 
   # Default Constructor
   ISBNBook()
   { }
 
 
-  [void] GetISBNBookData($ISBN)
+  [int] GetISBNBookData($ISBN)
   {
-    $rootURL = "https://openlibrary.org/isbn/"
 
     $isbnFormatted = $ISBN.Replace('-', '').Replace(' ', '')
 
-    $url = "$($rootURL)$($isbnFormatted).json"
+    $baseURL = "https://openlibrary.org/api/books?bibkeys=ISBN:"
+    $urlParams = "&jscmd=data&format=json"
 
-    $bookData = Invoke-RestMethod $url
+$retCode = 0
+
+    $url = "$($baseURL)$($isbnFormatted)$($urlParams)"
+
+    try {
+      $bookData = Invoke-RestMethod $url
+$retCode = 1
+    }
+    catch {
+$retCode = 2
+      Write-Host "Error calling $url $($Error.ToString())"
+      return $retCode
+    }
 
     # Error handler for books not found
-    if ($null -eq $bookData)
+    if ($null -eq $bookData."ISBN:$isbnformatted")
     {
-      $this.ISBN = $ISBN
-      $this.Title = 'Book Not Found'
+$retCode = 3
+      $this.ISBN10 = '0'
+      $this.ISBN13 = '0'
+      $this.Title = "ISBN $ISBN was not found in the OpenLibrary.org database "
       $this.LCCN = ''
       $this.ByStatement = ''
+
       $this.NumberOfPages = ''
-      $this.Publishers = ''
       $this.PublishDate = ''
-      $this.CreatedDate = ''
-      $this.LastModifiedDate = ''
-      $this.PublisherLocation = ''
-      #$this.Contributors = $bookData.contributions
-      $this.Subject = ''
-      $this.RevisionNumber = ''
-      $this.LatestRevisionNumber = ''
+      $this.LibraryOfCongressClassification = ''
+      $this.DeweyDecimalClass = ''
       $this.Notes = ''
 
-      # Clean up the edition name
-      $this.EditionName = ''
+      $this.CoverUrlSmall = ''
+      $this.CoverUrlMedium = ''
+      $this.CoverUrlLarge = ''
 
-      # Try to extract just the author name by removing the "by"
       $this.Author = ''
+      $this.Subject = ''
+      $this.Publishers = ''
+      $this.PublisherLocation = ''
+
     }
-    else
+    else # The book was found, assign the data
     {
-      $this.ISBN10 = $bookData.isbn_10
-      $this.ISBN13 = $bookData.isbn_13
-      $this.Title = $bookData.title
-      $this.LCCN = $bookData.lccn
-      $this.ByStatement = $bookData.by_statement
-      $this.NumberOfPages = $bookData.number_of_pages
-      $this.Publishers = $bookData.publishers
-      $this.PublishDate = $bookData.publish_date
-      $this.CreatedDate = $bookData.created.value
-      $this.LastModifiedDate = $bookData.last_modified.value
-      $this.PublisherLocation = $bookData.publish_places
-      #$this.Contributors = $bookData.contributions
-      $this.Subject = $bookData.subjects
-      $this.RevisionNumber = $bookData.revision
-      $this.LatestRevisionNumber = $bookData.latest_revision
-      $this.Notes = $bookData.notes.value
+$retCode = 4
+      $this.ISBN10 = $bookData."ISBN:$isbnformatted".identifiers.isbn_10
+      $this.ISBN13 = $bookData."ISBN:$isbnformatted".identifiers.isbn_13
+      $this.Title = $bookData."ISBN:$isbnformatted".title
+      $this.LCCN = $bookData."ISBN:$isbnformatted".identifiers.lccn
 
-      # Clean up the edition name
-      if ($null -eq $bookData.edition_name)
-      { $this.EditionName = ''}
+      # Remove the "by" (if present) at the beginning of the by statement
+      # We need to check for null though, otherwise using Replace on a null string
+      # will throw an error
+      if ($null -eq $bookData."ISBN:$isbnformatted".by_statement)
+        { $this.ByStatement = '' }
       else
-      { $this.EditionName = $bookData.edition_name.Replace('[','').Replace(']','').Replace('..', '.') }
+        { $this.ByStatement = $bookData."ISBN:$isbnformatted".by_statement.Replace('by ', '') }
 
-      # Try to extract just the author name by removing the "by"
-      if ($null -eq $bookData.by_statement)
-      { $this.Author = '' }
-      else
-      { $this.Author = $bookData.by_statement.Replace('by ', '').Replace('.', '') }
+      $this.NumberOfPages = $bookData."ISBN:$isbnformatted".number_of_pages
+      $this.PublishDate = $bookData."ISBN:$isbnformatted".publish_date
+      $this.LibraryOfCongressClassification = $bookData."ISBN:$isbnformatted".classifications.lc_classifications
+      $this.DeweyDecimalClass = $bookData."ISBN:$isbnformatted".classifications.dewey_decimal_class
+      $this.Notes = $bookData."ISBN:$isbnformatted".notes
+
+      $this.CoverUrlSmall = $bookData."ISBN:$isbnformatted".cover.small
+      $this.CoverUrlMedium = $bookData."ISBN:$isbnformatted".cover.medium
+      $this.CoverUrlLarge = $bookData."ISBN:$isbnformatted".cover.large
+
+      # Books can have multiple authors, each is return in its own item in an array.
+      # Combine them into a single string.
+      $authors = [System.Text.StringBuilder]::new()
+      foreach ($a in $bookData."ISBN:$isbnformatted".authors)
+      {
+        if ($authors.Length -gt 1)
+          { [void]$authors.Append(", $($a.name)") }
+        else
+          { [void]$authors.Append($a.name) }
+      }
+      $this.Author = $authors.ToString()
+
+      # Subjects can be an array, combine into a single string
+      $subjects = [System.Text.StringBuilder]::new()
+      foreach ($s in $bookData."ISBN:$isbnformatted".subjects)
+      {
+        if ($subjects.Length -gt 1)
+          { [void]$subjects.Append(", $($s.name)") }
+        else
+          { [void]$subjects.Append($s.name) }
+      }
+      $this.Subject = $subjects.ToString()
+
+      # A book could have multiple publishers over time. The author could shift to
+      # a new publisher, or more likely a publishing house could be purchases and
+      # the new owners name used. The data is returned as an array, so combine
+      # them as we did with authors and subjects
+      $thePublishers = [System.Text.StringBuilder]::new()
+      foreach ($p in $bookData."ISBN:$isbnformatted".publishers)
+      {
+        if ($thePublishers.Length -gt 1)
+          { [void]$thePublishers.Append(", $($p.name)") }
+        else
+          { [void]$thePublishers.Append($p.name) }
+      }
+      $this.Publishers = $thePublishers.ToString()
+
+      # Since there could be multiple publishers, logically there could be multiple
+      # publishing locations. Combine them.
+      $locations = [System.Text.StringBuilder]::new()
+      foreach ($l in $bookData."ISBN:$isbnformatted".publish_places)
+      {
+        if ($locations.Length -gt 1)
+          { [void]$locations.Append(", $($l.name)") }
+        else
+          { [void]$locations.Append($l.name) }
+      }
+      $this.PublisherLocation = $locations.ToString()
+
     }
-
+return $retCode
   }
 
 }
