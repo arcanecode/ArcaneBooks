@@ -1,0 +1,56 @@
+{
+  "publishers": [
+    "Sams"
+  ],
+  "languages": [
+    {
+      "key": "/languages/eng"
+    }
+  ],
+  "identifiers": {
+    "goodreads": [
+      "3084620"
+    ],
+    "librarything": [
+      "1522789"
+    ]
+  },
+  "title": "Radio Handbook",
+  "physical_format": "Hardcover",
+  "number_of_pages": 1168,
+  "isbn_13": [
+    "9780672218743"
+  ],
+  "isbn_10": [
+    "0672218747"
+  ],
+  "publish_date": "December 1982",
+  "key": "/books/OL7667922M",
+  "authors": [
+    {
+      "key": "/authors/OL1196498A"
+    }
+  ],
+  "works": [
+    {
+      "key": "/works/OL8273120W"
+    }
+  ],
+  "type": {
+    "key": "/type/edition"
+  },
+  "subjects": [
+    "Radio",
+    "Technology & Industrial Arts"
+  ],
+  "latest_revision": 6,
+  "revision": 6,
+  "created": {
+    "type": "/type/datetime",
+    "value": "2008-04-29T15:03:11.581851"
+  },
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2022-02-16T09:26:53.493088"
+  }
+}

@@ -15,80 +15,68 @@
 class ISBNBook
 {
     # Properties
-    [string] $ISBN10
-    [string] $ISBN13
-    [string] $Title
-    [string] $LCCN
-    [string] $Author
-    [string] $ByStatement
-    [string] $NumberOfPages
-    [string] $Publishers
-    [string] $PublishDate
-    [string] $PublisherLocation
-    [string] $Subject
-    [string] $LibraryOfCongressClassification
-    [string] $DeweyDecimalClass
-    [string] $Notes
-    [string] $CoverUrlSmall
-    [string] $CoverUrlMedium
-    [string] $CoverUrlLarge
+    [string] $ISBN = ''
+    [string] $ISBN10 = ''
+    [string] $ISBN13 = ''
+    [string] $Title = ''
+    [string] $LCCN = ''
+    [string] $Author = ''
+    [string] $ByStatement = ''
+    [string] $NumberOfPages = ''
+    [string] $Publishers = ''
+    [string] $PublishDate = ''
+    [string] $PublisherLocation = ''
+    [string] $Subject = ''
+    [string] $LibraryOfCongressClassification = ''
+    [string] $DeweyDecimalClass = ''
+    [string] $Notes = ''
+    [string] $CoverUrlSmall = ''
+    [string] $CoverUrlMedium = ''
+    [string] $CoverUrlLarge = ''
 
   # Default Constructor
   ISBNBook()
   { }
 
 
-  [int] GetISBNBookData($ISBN)
+  [string] GetISBNBookData($ISBN)
   {
 
-    $isbnFormatted = $ISBN.Replace('-', '').Replace(' ', '')
+    # retMsg = Return Message
+    $retMsg = "Beginning GetISBNBookData for $ISBN at $(Get-Date).ToString('yyyy-MM-dd hh:mm:ss tt')"
 
+    $isbnFormatted = $ISBN.Replace('-', '').Replace(' ', '')
     $baseURL = "https://openlibrary.org/api/books?bibkeys=ISBN:"
     $urlParams = "&jscmd=data&format=json"
 
-$retCode = 0
-
     $url = "$($baseURL)$($isbnFormatted)$($urlParams)"
 
+    # Set the ISBN property to what was passed in
+    $this.ISBN = $isbnFormatted
+
+    # Try to get the ISBN data from the OpenLibrary website
     try {
       $bookData = Invoke-RestMethod $url
-$retCode = 1
+      $retMsg = "Retrieved ISBN $ISBN from OpenLibrary"
     }
     catch {
-$retCode = 2
-      Write-Host "Error calling $url $($Error.ToString())"
-      return $retCode
+      $this.ISBN10 = '0'
+      $this.ISBN13 = '0'
+      $this.Title = "Failed to retrieve ISBN $ISBN. Possible internect connection issue."
+      $retMsg = "Failed to retrieve ISBN $ISBN. Possible internect connection issue."
+      return $retMsg
     }
 
     # Error handler for books not found
     if ($null -eq $bookData."ISBN:$isbnformatted")
     {
-$retCode = 3
       $this.ISBN10 = '0'
       $this.ISBN13 = '0'
-      $this.Title = "ISBN $ISBN was not found in the OpenLibrary.org database "
-      $this.LCCN = ''
-      $this.ByStatement = ''
-
-      $this.NumberOfPages = ''
-      $this.PublishDate = ''
-      $this.LibraryOfCongressClassification = ''
-      $this.DeweyDecimalClass = ''
-      $this.Notes = ''
-
-      $this.CoverUrlSmall = ''
-      $this.CoverUrlMedium = ''
-      $this.CoverUrlLarge = ''
-
-      $this.Author = ''
-      $this.Subject = ''
-      $this.Publishers = ''
-      $this.PublisherLocation = ''
-
+      $this.Title = "ISBN $ISBN was not found in the OpenLibrary.org database"
+      $retMsg = "ISBN $ISBN was not found in the OpenLibrary.org database"
     }
     else # The book was found, assign the data
     {
-$retCode = 4
       $this.ISBN10 = $bookData."ISBN:$isbnformatted".identifiers.isbn_10
       $this.ISBN13 = $bookData."ISBN:$isbnformatted".identifiers.isbn_13
       $this.Title = $bookData."ISBN:$isbnformatted".title
@@ -112,7 +100,7 @@ $retCode = 4
       $this.CoverUrlMedium = $bookData."ISBN:$isbnformatted".cover.medium
       $this.CoverUrlLarge = $bookData."ISBN:$isbnformatted".cover.large
 
-      # Books can have multiple authors, each is return in its own item in an array.
+      # Books can have multiple authors, each is returned in its own item in an array.
       # Combine them into a single string.
       $authors = [System.Text.StringBuilder]::new()
       foreach ($a in $bookData."ISBN:$isbnformatted".authors)
@@ -161,8 +149,11 @@ $retCode = 4
       }
       $this.PublisherLocation = $locations.ToString()
 
+      # All done! Set a success message.
+      $retMsg = "Successfully retrieved data for ISBN $ISBN"
     }
-return $retCode
+
+    return $retMsg
   }
 
 }

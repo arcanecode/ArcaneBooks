@@ -17,9 +17,9 @@ function Get-ISBNBookData()
       $book = [ISBNBook]::new()
 
       Write-Verbose "Getting the book data for ISBN $ISBN"
-      $retCode = $book.GetISBNBookData($ISBN)
-Write-Verbose "Return Code $retCode"
-      Write-Verbose "Fetched Data for $($book.ISBN10) - $($book.Title)"
+      $retMsg = $book.GetISBNBookData($ISBN)
+      Write-Verbose "Calling GetISBNBookData returned a message of: $retMsg"
+      Write-Verbose "Finished Getting Data for $($ISBN) - $($book.Title)"
     }
 
     Write-Verbose "Returning the book object to you"

@@ -70,6 +70,7 @@ $ISBNs = @( '0-87259-481-5'
 $bookData = $ISBNs | Get-ISBNBookData -Verbose
 $bookData
 
+$bookData | Select-Object -Property ISBN, Title
 
 $ISBN = '1-887736-06-9'
 $ISBN = '0-914126-02-4'
