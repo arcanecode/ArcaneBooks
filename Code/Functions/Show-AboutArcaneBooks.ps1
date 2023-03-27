@@ -5,11 +5,13 @@ This function does nothing more than display additional information about the Ar
 .DESCRIPTION
 Simply displays additional information on where users can find more information on the ArcaneBooks module.
 
+The displayed data comes from the Data-AboutMessage.txt file in the Internal folder.
+
 .INPUTS
 This cmdlet has no inputs.
 
 .OUTPUTS
-The cmdlet creates an array of one or more objects with the following properties
+There are no outputs for this cmdlet
 
 .EXAMPLE
 Show-AboutArcaneBooks
