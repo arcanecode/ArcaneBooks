@@ -28,6 +28,12 @@ if ( 1-eq 1 ) { exit }
 # if you are making changes and want to test those changes.
 #------------------------------------------------------------------------------------------------
 
+# On my system when I open the project it goes to D:\OneDrive\PSCore\ArcaneBooks.
+# You need to be in the actual Code folder for things such as Removing or Importing the module,
+# generating help, etc to work. So I added a quick change to the Code folder here, mostly
+# so I don't forget.
+Set-Location .\Code
+
 # If the module is not in memory, then suppress the error and silently continue
 # Note make sure you are in the code directory!
 Remove-Module ArcaneBooks -ErrorAction SilentlyContinue
@@ -75,3 +81,36 @@ $bookData = $ISBNs | Get-ISBNBookData -Verbose
 $bookData
 
 $bookData | Select-Object -Property ISBN, Title
+
+#------------------------------------------------------------------------------------------------
+# Working with LCCNs
+#------------------------------------------------------------------------------------------------
+
+Remove-Module ArcaneBooks -ErrorAction SilentlyContinue
+Import-Module D:\OneDrive\PSCore\ArcaneBooks\ArcaneBooks\Code\ArcaneBooks -Verbose
+
+# Pass in a single LCCN as a parameter
+$LCCN = '54009698'
+$bookData = Get-LCCNBookData -LCCN $LCCN -Verbose
+$bookData
+
+.EXAMPLE
+# Pipe in a single ISBN
+$LCCN = '54-9698'
+$bookData = $LCCN | Get-LCCNBookData
+$bookData
+
+.EXAMPLE
+# Pipe in an array of LCCNs
+$LCCNs = @( '54-9698'
+          , '40-33904'
+          , '41-3345'
+          , '64-20875'
+          , '74-75450'
+          , '76-190590'
+          , '71-120473'
+          )
+$bookData = $LCCNs | Get-LCCNBookData -Verbose
+$bookData
+
+$bookData | Select-Object -Property LCCNReformatted, LibraryOfCongressNumber, Title

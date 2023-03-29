@@ -56,6 +56,6 @@ the express written consent of the author.
 
 ## RELATED LINKS
 
-[https://github.com/arcanecode/DataFabricator/blob/master/Documentation/Show-AboutDataFabricator.md](https://github.com/arcanecode/DataFabricator/blob/master/Documentation/Show-AboutDataFabricator.md)
+[https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Show-AboutDataFabricator.md](https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Show-AboutDataFabricator.md)
 
 [ArcaneCode's Website](http://arcanecode.me)

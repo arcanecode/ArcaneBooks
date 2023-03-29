@@ -1,9 +1,9 @@
 <#-------------------------------------------------------------------------------------------------
-  ArcaneBooks - Export-Documentation.ps1
+  ArcaneBooks - Export-Help.ps1
   Author: Robert C. Cain | @ArcaneCode | arcane@arcanetc.com
            http://arcanecode.me
 
-  This file is used to generate (or regenerate) the Markdown Documenation from the
+  This file is used to generate (or regenerate) Help files in Markdown fomrat from the
   inline help using the PlatyPS module. Using this, when I update any function in the module and
   its help, I can simply run this script to regenerate all the documentation quick and easy.
 
@@ -21,13 +21,16 @@
   written consent of the author.
 -----------------------------------------------------------------------------------------------#>
 
-# To install PlatyPS, make sure you open a Windows Terminal and do it there. The VSCode
-# terminal prevents installs from working correctly!
-
 # Install-Module PlatyPS       # Should only need to run this once
 
 # Import PlatyPS into memory
 Import-Module PlatyPS
+
+# On my system when I open the project it goes to D:\OneDrive\PSCore\ArcaneBooks.
+# You need to be in the actual Code folder for things such as Removing or Importing the module,
+# generating help, etc to work. So I added a quick change to the Code folder here, mostly
+# so I don't forget.
+Set-Location .\Code
 
 # Before running, you need to have the most current version of ArcaneBooks loaded in memory
 Remove-Module ArcaneBooks -ErrorAction SilentlyContinue

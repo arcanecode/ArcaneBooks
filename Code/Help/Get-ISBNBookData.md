@@ -90,25 +90,29 @@ Via the pipeline this cmdlet can accept an array of ISBN values.
 ## OUTPUTS
 
 The cmdlet returns one or more objects of type Class ISBNBook with the
-following properties:
-ISBN
-ISBN10
-ISBN13
-Title
-LCCN
-Author
-ByStatement
-NumberOfPages
-Publishers
-PublishDate
-PublisherLocation
-Subject
-LibraryOfCongressClassification
-DeweyDecimalClass
-Notes
-CoverUrlSmall
-CoverUrlMedium
-CoverUrlLarge
+following properties. Note that not all properties may be present, it
+depends on what data the publisher provided.
+
+Property | Description
+| ----- | ------ |
+ISBN | The ISBN number that was passed in, complete with an formatting
+ISBN10 | ISBN as 10 digits
+ISBN13 | ISBN in 13 digit format
+Title | The title of the book
+LCCN | Library of Congress Catalog Number
+Author | The author(s) of the book
+ByStatement | The written by statement provided by the publisher
+NumberOfPages | Number of pages in the book
+Publishers | The Publisher(s) of this book
+PublishDate | The publication date for this edition of the book
+PublisherLocation | The location of the publisher
+Subject | Generic subject(s) for the work
+LibraryOfCongressClassification | Specialized classification used by Library of Congress
+DeweyDecimalClass | Dewey Decimal number
+Notes | Any additional information provided by the publisher
+CoverUrlSmall | URL link to an image of the book cover, in a small size
+CoverUrlMedium | URL link to an image of the book cover, in a medium size
+CoverUrlLarge | URL link to an image of the book cover, in a large size
 
 ## NOTES
 
@@ -126,6 +130,6 @@ the express written consent of the author.
 
 ## RELATED LINKS
 
-[https://github.com/arcanecode/DataFabricator/blob/master/Documentation/CMDLET-HERE.md](https://github.com/arcanecode/DataFabricator/blob/master/Documentation/CMDLET-HERE.md)
+[https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Get-ISBNBookData.md](https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Get-ISBNBookData.md)
 
 [ArcaneCode's Website](http://arcanecode.me)
