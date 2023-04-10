@@ -113,4 +113,4 @@ $LCCNs = @( '54-9698'
 $bookData = $LCCNs | Get-LCCNBookData -Verbose
 $bookData
 
-$bookData | Select-Object -Property LCCNReformatted, LibraryOfCongressNumber, Title
+$bookData | Select-Object -Property LCCNReformatted, Subject, LibraryOfCongressNumber, Title

@@ -1,0 +1,78 @@
+<zs:searchRetrieveResponse xmlns:zs="http://docs.oasis-open.org/ns/search-ws/sruResponse">
+  <zs:numberOfRecords>2</zs:numberOfRecords>
+  <zs:records>
+    <zs:record>
+      <zs:recordSchema>mods</zs:recordSchema>
+      <zs:recordXMLEscaping>xml</zs:recordXMLEscaping>
+      <zs:recordData>
+        <mods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://www.loc.gov/mods/v3" version="3.8" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-8.xsd">
+          <titleInfo>
+            <title>Elements of radio servicing</title>
+          </titleInfo>
+          <name type="personal" usage="primary">
+            <namePart>Marcus, William. [from old catalog]</namePart>
+          </name>
+          <name type="personal">
+            <namePart>Levy, Alex,</namePart>
+            <role>
+              <roleTerm type="text">joint author</roleTerm>
+            </role>
+          </name>
+          <typeOfResource>text</typeOfResource>
+          <originInfo>
+            <place>
+              <placeTerm type="code" authority="marccountry">nyu</placeTerm>
+            </place>
+            <dateIssued encoding="marc">1955</dateIssued>
+            <issuance>monographic</issuance>
+            <place>
+              <placeTerm type="text">New York</placeTerm>
+            </place>
+            <agent>
+              <namePart>McGraw Hill</namePart>
+            </agent>
+            <dateIssued>[1955]</dateIssued>
+            <edition>2d ed.</edition>
+          </originInfo>
+          <language>
+            <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+          </language>
+          <physicalDescription>
+            <form authority="marcform">print</form>
+            <extent>566 p. illus. 24 cm.</extent>
+          </physicalDescription>
+          <subject authority="lcsh">
+            <topic>Radio</topic>
+            <topic>Repairing. [from old catalog]</topic>
+          </subject>
+          <classification authority="lcc">TK6553 .M298 1955</classification>
+          <identifier type="lccn">54009698</identifier>
+          <recordInfo>
+            <recordContentSource authority="marcorg">DLC</recordContentSource>
+            <recordCreationDate encoding="marc">820525</recordCreationDate>
+            <recordChangeDate encoding="iso8601">20040824072855.0</recordChangeDate>
+            <recordIdentifier>6046000</recordIdentifier>
+            <recordOrigin>Converted from MARCXML to MODS version 3.8 using MARC21slim2MODS3-8_XSLT1-0.xsl (Revision 1.172 20230208)</recordOrigin>
+          </recordInfo>
+        </mods>
+      </zs:recordData>
+      <zs:recordPosition>1</zs:recordPosition>
+    </zs:record>
+  </zs:records>
+  <zs:nextRecordPosition>2</zs:nextRecordPosition>
+  <zs:echoedSearchRetrieveRequest>
+    <zs:version>2.0</zs:version>
+    <zs:query>bath.lccn=54009698</zs:query>
+    <zs:maximumRecords>1</zs:maximumRecords>
+    <zs:recordXMLEscaping>xml</zs:recordXMLEscaping>
+    <zs:recordSchema>mods</zs:recordSchema>
+  </zs:echoedSearchRetrieveRequest>
+  <zs:diagnostics xmlns:diag="http://docs.oasis-open.org/ns/search-ws/diagnostic">
+    <diag:diagnostic>
+      <diag:uri>info:srw/diagnostic/1/5</diag:uri>
+      <diag:details>2.0</diag:details>
+      <diag:message>Unsupported version</diag:message>
+    </diag:diagnostic>
+  </zs:diagnostics>
+</zs:searchRetrieveResponse>

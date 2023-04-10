@@ -85,12 +85,13 @@ class LCCNBook
 
       # Subjects can be an array, combine into a single string
       $subjects = [System.Text.StringBuilder]::new()
-      foreach ($s in $bookData.searchRetrieveResponse.records.record.recordData.mods.subject)
+      $topics = $bookData.searchRetrieveResponse.records.record.recordData.mods.subject | Select topic
+      foreach ($s in $topics.topic)
       {
         if ($subjects.Length -gt 1)
-          { [void]$subjects.Append(", $($s.topic)") }
+          { [void]$subjects.Append(", $($s)") }
         else
-          { [void]$subjects.Append($s.topic) }
+          { [void]$subjects.Append($s) }
       }
       $this.Subject = $subjects.ToString()
 
