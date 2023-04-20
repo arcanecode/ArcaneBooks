@@ -114,3 +114,22 @@ $bookData = $LCCNs | Get-LCCNBookData -Verbose
 $bookData
 
 $bookData | Select-Object -Property LCCNReformatted, Subject, LibraryOfCongressClassification, Title
+
+#------------------------------------------------------------------------------------------------
+# Informational Functions
+#------------------------------------------------------------------------------------------------
+
+Remove-Module ArcaneBooks -ErrorAction SilentlyContinue
+Import-Module D:\OneDrive\PSCore\ArcaneBooks\ArcaneBooks\Code\ArcaneBooks -Verbose
+
+# Display information about this module
+Show-AboutArcaneBooks
+
+# Display the list of functions
+Show-AboutFunctions
+
+# Open the GitHub site for this project in your default browser
+Open-ABGitHub
+
+# Open the "About Me" page on the module authors website
+Open-AboutArcaneCode

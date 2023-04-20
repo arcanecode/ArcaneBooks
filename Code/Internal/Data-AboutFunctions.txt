@@ -11,6 +11,14 @@ Description
 
 ArcaneBooks Cmdlets
 
+Get-ISBNBookData :
+
+    Retrieves information for one or more books based on the ISBN number.
+
+Get-LCCNBookData
+
+    Retrieves information for one or more books based on the LCCN (Library of Congress) number.
+
 Show-AboutArcaneBooks : https://github.com/arcanecode/ArcaneBooks/blob/master/Documentation/Show-AboutArcaneBooks.md
 
     Displays information about the ArcaneBooks module, with links to find out more info.
@@ -18,6 +26,14 @@ Show-AboutArcaneBooks : https://github.com/arcanecode/ArcaneBooks/blob/master/Do
 Show-ArcaneBooksFunctions : https://github.com/arcanecode/ArcaneBooks/blob/master/Documentation/Show-ArcaneBooksFunctions.md
 
     Displays a list of all the functions in the ArcaneBooks, along with a synopsis of their purpose.
+
+Open-ABGitHub :
+
+    Opens the GitHub website for ArcaneBooks in your default browser.
+
+Open-AboutArcaneCode :
+
+    Opens the ArcaneCode blog to the "About Me" page to learn more about the author of ArcaneBooks.
 
 ---
 

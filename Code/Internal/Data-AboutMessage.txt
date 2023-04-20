@@ -6,6 +6,12 @@ This module is designed to retrieve metadata for books based on either the ISBN
 or the LCCN (Library of Congress Catalog Number). It will return data such as
 the book title, author, and more.
 
+To see a list of functions, please use the "Show-AboutFunctions" cmdlet of the class.
+
+Each cmdlet has help, you can use the Get-Help feature of PowerShell to learn more about each one.
+
+
+
 ArcaneBooks
 
 Author: Robert C Cain | @ArcaneCode | arcane@arcanetc.com
@@ -16,7 +22,7 @@ The code herein is for demonstration purposes. No warranty or guarantee is impli
 
 This module may not be reproduced in whole or in part without the express written consent of the author.
 
-Where to find more about me: http://arcanecode.me
+Where to find more about me: https://arcanecode.com/info/
 
 Where to find the source code, online help, and more about ArcaneBooks: https://github.com/arcanecode/ArcaneBooks
 

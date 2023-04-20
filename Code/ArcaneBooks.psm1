@@ -22,8 +22,11 @@
 
 # Run the scripts to load the functions into memory
 . ./Functions/Show-AboutArcaneBooks.ps1
+. ./Functions/Show-AboutFunctions.ps1
 . ./Functions/Get-ISBNBookData.ps1
 . ./Functions/Get-LCCNBookData.ps1
+. ./Functions/Open-ABGitHub.ps1
+. ./Functions/Open-AboutArcaneCode.ps1
 
 #-----------------------------------------------------------------------------#
 # Export our functions
@@ -31,3 +34,6 @@
 Export-ModuleMember Show-AboutArcaneBooks
 Export-ModuleMember Get-ISBNBookData
 Export-ModuleMember Get-LCCNBookData
+Export-ModuleMember Open-ABGitHub
+Export-ModuleMember Open-AboutArcaneCode
+Export-ModuleMember Show-AboutFunctions
