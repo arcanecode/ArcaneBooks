@@ -28,7 +28,7 @@ This module may not be reproduced in whole or in part without
 the express written consent of the author.
 
 .LINK
-https://github.com/arcanecode/ArcaneBooks
+https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-ABGitHub.md
 
 .LINK
 http://arcanecode.me

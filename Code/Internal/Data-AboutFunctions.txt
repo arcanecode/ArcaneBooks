@@ -11,11 +11,11 @@ Description
 
 ArcaneBooks Cmdlets
 
-Get-ISBNBookData :
+Get-ISBNBookData : https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Get-ISBNBookData.md
 
     Retrieves information for one or more books based on the ISBN number.
 
-Get-LCCNBookData
+Get-LCCNBookData : https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Get-LCCNBookData.md
 
     Retrieves information for one or more books based on the LCCN (Library of Congress) number.
 
@@ -23,15 +23,15 @@ Show-AboutArcaneBooks : https://github.com/arcanecode/ArcaneBooks/blob/master/Do
 
     Displays information about the ArcaneBooks module, with links to find out more info.
 
-Show-ArcaneBooksFunctions : https://github.com/arcanecode/ArcaneBooks/blob/master/Documentation/Show-ArcaneBooksFunctions.md
+Show-AboutFunctions : https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Show-AboutFunctions.md
 
     Displays a list of all the functions in the ArcaneBooks, along with a synopsis of their purpose.
 
-Open-ABGitHub :
+Open-ABGitHub : https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-ABGitHub.md
 
     Opens the GitHub website for ArcaneBooks in your default browser.
 
-Open-AboutArcaneCode :
+Open-AboutArcaneCode : https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-AboutArcaneCode.md
 
     Opens the ArcaneCode blog to the "About Me" page to learn more about the author of ArcaneBooks.
 

@@ -118,6 +118,7 @@ $bookData | Select-Object -Property LCCNReformatted, Subject, LibraryOfCongressC
 #------------------------------------------------------------------------------------------------
 # Informational Functions
 #------------------------------------------------------------------------------------------------
+cd ./Code
 
 Remove-Module ArcaneBooks -ErrorAction SilentlyContinue
 Import-Module D:\OneDrive\PSCore\ArcaneBooks\ArcaneBooks\Code\ArcaneBooks -Verbose

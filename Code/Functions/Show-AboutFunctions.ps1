@@ -32,7 +32,7 @@ This module may not be reproduced in whole or in part without
 the express written consent of the author.
 
 .LINK
-https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Show-AboutDataFabricator.md
+https://github.com/arcanecode/ArcaneBooks/blob/master/Documentation/Show-AboutFunctions.md
 
 .LINK
 http://arcanecode.me
