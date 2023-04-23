@@ -91,6 +91,7 @@ http://arcanecode.me
 function Get-ISBNBookData()
 {
   [CmdletBinding()]
+  [alias("gisbn")]
   param (
          [Parameter( Mandatory = $true,
                      ValueFromPipeline = $true,

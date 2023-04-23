@@ -1,30 +1,30 @@
-# Show-AboutFunctions
+# Show-AboutArcaneBooks
 
 ## SYNOPSIS
 
-This function does nothing more than display the list of functions the ArcaneBooks module.
+This function does nothing more than display additional information about the ArcaneBooks module.
 
 ## SYNTAX
 
 ```powershell
-Show-AboutFunctions [<CommonParameters>]
+Show-AboutArcaneBooks [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Displays a list of functions along with a brief overview of each.
+Simply displays additional information on where users can find more information on the ArcaneBooks module.
 
-The displayed data comes from the Data-AboutFunctions.txt file in the Internal folder.
+The displayed data comes from the Data-AboutMessage.txt file in the Internal folder.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
 ```powershell
-Show-AboutFunctions
+Show-AboutArcaneBooks
 ```
 
-Shows the functions included in this module.
+Shows the info about this module.
 
 ## PARAMETERS
 
@@ -42,7 +42,7 @@ There are no outputs for this cmdlet
 
 ## NOTES
 
-ArcaneBooks - Show-AboutFunctions.ps1
+ArcaneBooks - Show-AboutArcaneBooks.ps1
 
 Author: Robert C Cain | [@ArcaneCode](https://twitter.com/arcanecode) | arcane@arcanetc.com
 
@@ -56,6 +56,6 @@ the express written consent of the author.
 
 ## RELATED LINKS
 
-[https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Show-AboutDataFabricator.md](https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Show-AboutDataFabricator.md)
+[w-AboutArcaneBooks](https://github.com/arcanecode/ArcaneBooks/blob/master/Documentation/Show-AboutArcaneBooks.md)
 
 [ArcaneCode's Website](http://arcanecode.me)

@@ -7,7 +7,7 @@ Opens the authors blog site to the "About Me" page with more information on his 
 ## SYNTAX
 
 ```powershell
-Open-AboutArcaneCode
+Open-AboutArcaneCode [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,6 +23,10 @@ Open-AboutArcaneCode
 ```
 
 ## PARAMETERS
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -48,6 +52,6 @@ the express written consent of the author.
 
 ## RELATED LINKS
 
-[https://github.com/arcanecode/ArcaneBooks](https://github.com/arcanecode/ArcaneBooks)
+[https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-AboutArcaneCode.md](https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-AboutArcaneCode.md)
 
 [ArcaneCode's Website](http://arcanecode.me)

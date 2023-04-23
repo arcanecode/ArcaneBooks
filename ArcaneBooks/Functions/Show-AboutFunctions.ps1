@@ -42,6 +42,7 @@ http://arcanecode.me
 function Show-AboutFunctions()
 {
   [CmdletBinding()]
+  [alias("saf")]
   param (
         )
 

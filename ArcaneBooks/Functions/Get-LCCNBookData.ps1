@@ -79,6 +79,7 @@ http://arcanecode.me
 function Get-LCCNBookData()
 {
   [CmdletBinding()]
+  [alias("glccn")]
   param (
          [Parameter( Mandatory = $true,
                      ValueFromPipeline = $true,

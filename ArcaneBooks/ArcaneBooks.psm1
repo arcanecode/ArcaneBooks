@@ -13,27 +13,27 @@
 -----------------------------------------------------------------------------------------------#>
 
 # Run the scripts to load data into memory. These need to be run prior to running the functions.
-. ./Internal/Load-AboutMessages.ps1
-. ./Internal/Request-EndRunMessage.ps1
+. "$PSScriptRoot/Internal/Load-AboutMessages.ps1"
+. "$PSScriptRoot/Internal/Request-EndRunMessage.ps1"
 
 # Load the classes
-. ./Functions/Class_ISBNBook.ps1
-. ./Functions/Class_LCCNBook.ps1
+. "$PSScriptRoot/Functions/Class_ISBNBook.ps1"
+. "$PSScriptRoot/Functions/Class_LCCNBook.ps1"
 
 # Run the scripts to load the functions into memory
-. ./Functions/Show-AboutArcaneBooks.ps1
-. ./Functions/Show-AboutFunctions.ps1
-. ./Functions/Get-ISBNBookData.ps1
-. ./Functions/Get-LCCNBookData.ps1
-. ./Functions/Open-ABGitHub.ps1
-. ./Functions/Open-AboutArcaneCode.ps1
+. "$PSScriptRoot/Functions/Show-AboutArcaneBooks.ps1"
+. "$PSScriptRoot/Functions/Show-AboutFunctions.ps1"
+. "$PSScriptRoot/Functions/Get-ISBNBookData.ps1"
+. "$PSScriptRoot/Functions/Get-LCCNBookData.ps1"
+. "$PSScriptRoot/Functions/Open-ABGitHub.ps1"
+. "$PSScriptRoot/Functions/Open-AboutArcaneCode.ps1"
 
 #-----------------------------------------------------------------------------#
 # Export our functions
 #-----------------------------------------------------------------------------#
-Export-ModuleMember Show-AboutArcaneBooks
-Export-ModuleMember Get-ISBNBookData
-Export-ModuleMember Get-LCCNBookData
-Export-ModuleMember Open-ABGitHub
-Export-ModuleMember Open-AboutArcaneCode
-Export-ModuleMember Show-AboutFunctions
+# Export-ModuleMember Show-AboutArcaneBooks
+# Export-ModuleMember Get-ISBNBookData
+# Export-ModuleMember Get-LCCNBookData
+# Export-ModuleMember Open-ABGitHub
+# Export-ModuleMember Open-AboutArcaneCode
+# Export-ModuleMember Show-AboutFunctions

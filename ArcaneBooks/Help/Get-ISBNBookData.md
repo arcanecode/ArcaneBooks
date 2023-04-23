@@ -130,6 +130,6 @@ the express written consent of the author.
 
 ## RELATED LINKS
 
-[https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Get-ISBNBookData.md](https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Get-ISBNBookData.md)
+[https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Get-LCCNBookData.md](https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Get-LCCNBookData.md)
 
 [ArcaneCode's Website](http://arcanecode.me)

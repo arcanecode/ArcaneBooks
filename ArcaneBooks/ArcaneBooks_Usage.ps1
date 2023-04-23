@@ -32,12 +32,12 @@ if ( 1-eq 1 ) { exit }
 # You need to be in the actual Code folder for things such as Removing or Importing the module,
 # generating help, etc to work. So I added a quick change to the Code folder here, mostly
 # so I don't forget.
-Set-Location .\Code
+Set-Location .\ArcaneBooks
 
 # If the module is not in memory, then suppress the error and silently continue
 # Note make sure you are in the code directory!
 Remove-Module ArcaneBooks -ErrorAction SilentlyContinue
-Import-Module D:\OneDrive\PSCore\ArcaneBooks\ArcaneBooks\Code\ArcaneBooks -Verbose
+Import-Module D:\OneDrive\PSCore\ArcaneBooks\ArcaneBooks\ArcaneBooks\ArcaneBooks -Verbose
 
 Clear-Host
 
@@ -46,6 +46,9 @@ Clear-Host
 #------------------------------------------------------------------------------------------------
 Show-AboutArcaneBooks
 
+# Alias
+sab
+
 #------------------------------------------------------------------------------------------------
 # Working with ISBNs
 #------------------------------------------------------------------------------------------------
@@ -53,6 +56,11 @@ Show-AboutArcaneBooks
 # Pass in a single ISBN as a parameter
 $ISBN = '0-87259-481-5'
 $bookData = Get-ISBNBookData -ISBN $ISBN -Verbose
+$bookData
+
+# Test Alias
+$ISBN = '0-87259-481-5'
+$bookData = gisbn -ISBN $ISBN -Verbose
 $bookData
 
 # Pipe in a single ISBN
@@ -87,14 +95,18 @@ $bookData | Select-Object -Property ISBN, Title
 #------------------------------------------------------------------------------------------------
 
 Remove-Module ArcaneBooks -ErrorAction SilentlyContinue
-Import-Module D:\OneDrive\PSCore\ArcaneBooks\ArcaneBooks\Code\ArcaneBooks -Verbose
+Import-Module D:\OneDrive\PSCore\ArcaneBooks\ArcaneBooks\ArcaneBooks\ArcaneBooks -Verbose
 
 # Pass in a single LCCN as a parameter
 $LCCN = '54009698'
 $bookData = Get-LCCNBookData -LCCN $LCCN -Verbose
 $bookData
 
-.EXAMPLE
+# Alias
+$LCCN = '54009698'
+$bookData = glccn -LCCN $LCCN -Verbose
+$bookData
+
 # Pipe in a single ISBN
 $LCCN = '54-9698'
 $bookData = $LCCN | Get-LCCNBookData
@@ -118,19 +130,36 @@ $bookData | Select-Object -Property LCCNReformatted, Subject, LibraryOfCongressC
 #------------------------------------------------------------------------------------------------
 # Informational Functions
 #------------------------------------------------------------------------------------------------
-cd ./Code
-
 Remove-Module ArcaneBooks -ErrorAction SilentlyContinue
-Import-Module D:\OneDrive\PSCore\ArcaneBooks\ArcaneBooks\Code\ArcaneBooks -Verbose
+Import-Module D:\OneDrive\PSCore\ArcaneBooks\ArcaneBooks\ArcaneBooks\ArcaneBooks -Verbose
 
 # Display information about this module
 Show-AboutArcaneBooks
 
+# alias
+Clear-Host
+sab
+
 # Display the list of functions
 Show-AboutFunctions
+
+# alias
+Clear-Host
+saf
 
 # Open the GitHub site for this project in your default browser
 Open-ABGitHub
 
+# alias
+ogit
+
 # Open the "About Me" page on the module authors website
 Open-AboutArcaneCode
+
+# alias
+oac
+
+# ToDo
+# fix the Show functions
+# Add version info?
+# Finish Documentation

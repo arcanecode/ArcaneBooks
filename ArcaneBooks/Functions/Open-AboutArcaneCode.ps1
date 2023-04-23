@@ -36,6 +36,10 @@ http://arcanecode.me
 
 function Open-AboutArcaneCode()
 {
+  [CmdletBinding()]
+  [alias("oac")]
+  param (
+        )
 
   Start-Process "https://arcanecode.com/info/"
 

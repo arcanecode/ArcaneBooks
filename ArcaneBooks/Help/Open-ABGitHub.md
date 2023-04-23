@@ -7,7 +7,7 @@ Opens the GitHub site in the default browser for the ArcaneBooks module.
 ## SYNTAX
 
 ```powershell
-Open-ABGitHub
+Open-ABGitHub [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,6 +24,10 @@ Open-ABGitHub
 ```
 
 ## PARAMETERS
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -49,6 +53,6 @@ the express written consent of the author.
 
 ## RELATED LINKS
 
-[https://github.com/arcanecode/ArcaneBooks](https://github.com/arcanecode/ArcaneBooks)
+[https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-ABGitHub.md](https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-ABGitHub.md)
 
 [ArcaneCode's Website](http://arcanecode.me)

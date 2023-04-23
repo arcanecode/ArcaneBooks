@@ -36,6 +36,10 @@ http://arcanecode.me
 
 function Open-ABGitHub()
 {
+  [CmdletBinding()]
+  [alias("ogit")]
+  param (
+        )
 
   Start-Process "https://github.com/arcanecode/ArcaneBooks"
 

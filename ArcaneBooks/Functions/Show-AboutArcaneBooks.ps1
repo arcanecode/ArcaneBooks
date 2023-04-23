@@ -42,6 +42,7 @@ http://arcanecode.me
 function Show-AboutArcaneBooks()
 {
   [CmdletBinding()]
+  [alias("sab")]
   param (
         )
 
