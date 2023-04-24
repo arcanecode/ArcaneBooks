@@ -13,7 +13,6 @@
 -----------------------------------------------------------------------------------------------#>
 
 # Run the scripts to load data into memory. These need to be run prior to running the functions.
-. "$PSScriptRoot/Internal/Load-AboutMessages.ps1"
 . "$PSScriptRoot/Internal/Request-EndRunMessage.ps1"
 
 # Load the classes

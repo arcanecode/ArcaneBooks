@@ -34,7 +34,7 @@
   Description = 'This module has cmdlets to retreive a books metadata (title, author, etc) based on either the ISBN or LCCN (Library of Congress Control Number)'
 
   # Version number for the module
-  ModuleVersion = '0.9.2'
+  ModuleVersion = '0.9.4'
 
   # Minimum version of PowerShell needed to run this module
   PowerShellVersion = '7.0'
@@ -46,9 +46,7 @@
   CLRVersion = '2.0.50727'
 
   # These data files are used by the functions to hold additional data
-  FileList = @( './Internal/Data-AboutFunctions.txt',
-                './Internal/Data-AboutMessage.txt'
-              )
+  FileList = @()
 
   # Where can you find more info plus source code with documentation
   HelpInfoURI = 'https://github.com/arcanecode/ArcaneBooks/README.md'

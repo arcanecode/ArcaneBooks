@@ -160,6 +160,5 @@ Open-AboutArcaneCode
 oac
 
 # ToDo
-# fix the Show functions
 # Add version info?
 # Finish Documentation
