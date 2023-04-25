@@ -34,7 +34,7 @@
   Description = 'This module has cmdlets to retreive a books metadata (title, author, etc) based on either the ISBN or LCCN (Library of Congress Control Number)'
 
   # Version number for the module
-  ModuleVersion = '0.9.9'
+  ModuleVersion = '0.9.11'
 
   # Minimum version of PowerShell needed to run this module
   PowerShellVersion = '7.0'
@@ -49,7 +49,7 @@
   FileList = @()
 
   # Where can you find more info plus source code with documentation
-  HelpInfoURI = 'https://github.com/arcanecode/ArcaneBooks'
+  HelpInfoURI = 'https://github.com/arcanecode/ArcaneBooks/blob/c15b824537fc7926da083125bd2b38e06c72ac55/ArcaneBooks/en-us/about_ArcaneBooks.help.txt'
 
   # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
   FunctionsToExport = @( 'Get-ISBNBookData',
