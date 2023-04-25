@@ -4,7 +4,9 @@ I am a member of the [Alabama Historical Radio Society](https://alhrs.org/). We 
 
 Naturally we want to automate as much of this as possible, since the collection is rather extensive. Some of our books are so old they have neither an ISBN or a Library of Congress Catalog Number (LCCN for short). Others have only the LCCN, the newer books have an ISBN, and a very few have both.
 
-My goal with this project was to create a simple text files where a user can enter an LCCN into one file or the ISBN in another. That data will be piped through the appropriate cmdlets found in this module and produce a list of metadata for each book including things such as the book title, author, publication date, and the like.
+My goal with this project was to create a simple text files where a user can enter an LCCN into one file or the ISBN in another. That data file will be piped through the appropriate cmdlets found in this module and produce a list of metadata for each book including things such as the book title, author, publication date, and the like.
+
+This output can then be piped into standard PowerShell cmdlets to output the data to formats such as CSV, XML, JSON, and the like.
 
 The sources we'll use are the Library of Congress or the Open Library site, which is part of the Internet Archive. Both provide web APIs we can use to retrieve data.
 

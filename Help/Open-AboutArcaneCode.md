@@ -1,30 +1,26 @@
-# Show-AboutFunctions
+# Open-AboutArcaneCode
 
 ## SYNOPSIS
 
-This function does nothing more than display the list of functions the ArcaneBooks module.
+Opens the authors blog site to the "About Me" page with more information on his other projects.
 
 ## SYNTAX
 
 ```powershell
-Show-AboutFunctions [<CommonParameters>]
+Open-AboutArcaneCode [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Displays a list of functions along with a brief overview of each.
-
-The displayed data comes from the Data-AboutFunctions.txt file in the Internal folder.
+This function provides a quick and easy way to open the the authors blog where you can learn more information about him and his other projects.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
 ```powershell
-Show-AboutFunctions
+Open-AboutArcaneCode
 ```
-
-Shows the functions included in this module.
 
 ## PARAMETERS
 
@@ -38,11 +34,11 @@ This cmdlet has no inputs.
 
 ## OUTPUTS
 
-There are no outputs for this cmdlet
+Opens the ArcaneCode site for this module in your default browser.
 
 ## NOTES
 
-ArcaneBooks - Show-AboutFunctions.ps1
+ArcaneBooks - Open-AboutArcaneCode.ps1
 
 Author: Robert C Cain | [@ArcaneCode](https://twitter.com/arcanecode) | arcane@arcanetc.com
 
@@ -56,6 +52,6 @@ the express written consent of the author.
 
 ## RELATED LINKS
 
-[w-AboutFunctions](https://github.com/arcanecode/ArcaneBooks/blob/master/Documentation/Show-AboutFunctions.md)
+[https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-AboutArcaneCode.md](https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-AboutArcaneCode.md)
 
 [ArcaneCode's Website](http://arcanecode.me)

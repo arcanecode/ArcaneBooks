@@ -1,0 +1,42 @@
+
+about_ABFunctions
+
+SHORT DESCRIPTION
+   This is a listing of the functions available in the ArcaneBooks module.
+
+LONG DESCRIPTION
+   Get-ISBNBookData
+      Retrieves information for one or more books based on the ISBN number.
+      https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Get-ISBNBookData.md
+
+   Get-LCCNBookData
+      Retrieves information for one or more books based on the LCCN (Library
+      of Congress) number.
+      https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Get-LCCNBookData.md
+
+   Open-ABGitHub
+      Opens the GitHub website for ArcaneBooks in your default browser.
+      https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-ABGitHub.md
+
+   Open-AboutArcaneCode
+      Opens the ArcaneCode blog to the "About Me" page to learn more about
+      the author of ArcaneBooks.
+      https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-AboutArcaneCode.md
+
+NOTE
+   Author: Robert C Cain | @ArcaneCode | arcane@arcanetc.com
+
+   This code is Copyright (c) 2023 Robert C Cain All rights reserved
+
+   The code herein is for demonstration purposes. No warranty or guarantee
+   is implied or expressly granted.
+
+   This module may not be reproduced in whole or in part without the express
+   written consent of the author.
+
+SEE ALSO
+     https://github.com/arcanecode/ArcaneBooks
+     https://arcanecode.com/info/
+
+KEYWORDS
+     ArcaneBooks, ISBN, LCCN

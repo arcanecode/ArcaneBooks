@@ -42,14 +42,6 @@ Import-Module D:\OneDrive\PSCore\ArcaneBooks\ArcaneBooks\ArcaneBooks\ArcaneBooks
 Clear-Host
 
 #------------------------------------------------------------------------------------------------
-# Helper Functions
-#------------------------------------------------------------------------------------------------
-Show-AboutArcaneBooks
-
-# Alias
-sab
-
-#------------------------------------------------------------------------------------------------
 # Working with ISBNs
 #------------------------------------------------------------------------------------------------
 
@@ -128,24 +120,16 @@ $bookData
 $bookData | Select-Object -Property LCCNReformatted, Subject, LibraryOfCongressClassification, Title
 
 #------------------------------------------------------------------------------------------------
-# Informational Functions
+# Informational Functions and Help
 #------------------------------------------------------------------------------------------------
 Remove-Module ArcaneBooks -ErrorAction SilentlyContinue
 Import-Module D:\OneDrive\PSCore\ArcaneBooks\ArcaneBooks\ArcaneBooks\ArcaneBooks -Verbose
 
 # Display information about this module
-Show-AboutArcaneBooks
-
-# alias
-Clear-Host
-sab
+Get-Help about_ArcaneBooks
 
 # Display the list of functions
-Show-AboutFunctions
-
-# alias
-Clear-Host
-saf
+Get-Help about_ABFunctions
 
 # Open the GitHub site for this project in your default browser
 Open-ABGitHub
@@ -158,7 +142,3 @@ Open-AboutArcaneCode
 
 # alias
 oac
-
-# ToDo
-# Add version info?
-# Finish Documentation

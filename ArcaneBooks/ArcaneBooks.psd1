@@ -34,7 +34,7 @@
   Description = 'This module has cmdlets to retreive a books metadata (title, author, etc) based on either the ISBN or LCCN (Library of Congress Control Number)'
 
   # Version number for the module
-  ModuleVersion = '0.9.4'
+  ModuleVersion = '0.9.9'
 
   # Minimum version of PowerShell needed to run this module
   PowerShellVersion = '7.0'
@@ -49,15 +49,13 @@
   FileList = @()
 
   # Where can you find more info plus source code with documentation
-  HelpInfoURI = 'https://github.com/arcanecode/ArcaneBooks/README.md'
+  HelpInfoURI = 'https://github.com/arcanecode/ArcaneBooks'
 
   # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
   FunctionsToExport = @( 'Get-ISBNBookData',
                          'Get-LCCNBookData',
                          'Open-ABGitHub',
-                         'Open-AboutArcaneCode',
-                         'Show-AboutArcaneBooks',
-                         'Show-AboutFunctions'
+                         'Open-AboutArcaneCode'
                        )
 
   # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
@@ -70,9 +68,7 @@
   AliasesToExport = @( 'gisbn',
                        'glccn',
                        'ogit',
-                       'oac',
-                       'sab',
-                       'saf'
+                       'oac'
                      )
 
   # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
@@ -81,7 +77,7 @@
       PSData = @{
 
           # Tags applied to this module. These help with module discovery in online galleries.
-          Tags = @('ISBN', 'LCCN', 'Books')
+          Tags = @('ISBN', 'LCCN', 'Books', 'Windows', 'Linux', 'MacOS')
 
           # A URL to the license for this module.
           LicenseUri = 'https://github.com/arcanecode/ArcaneBooks/blob/main/LICENSE'

@@ -70,7 +70,7 @@ This module may not be reproduced in whole or in part without
 the express written consent of the author.
 
 .LINK
-https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Get-LCCNBookData.md
+https://github.com/arcanecode/ArcaneBooks/blob/1ebe781951f1a7fdf19bb6731487a74fa12ad08b/ArcaneBooks/Help/Get-LCCNBookData.md
 
 .LINK
 http://arcanecode.me
@@ -78,7 +78,7 @@ http://arcanecode.me
 
 function Get-LCCNBookData()
 {
-  [CmdletBinding()]
+  [CmdletBinding(HelpURI="https://github.com/arcanecode/ArcaneBooks/blob/1ebe781951f1a7fdf19bb6731487a74fa12ad08b/ArcaneBooks/Help/Get-LCCNBookData.md")]
   [alias("glccn")]
   param (
          [Parameter( Mandatory = $true,

@@ -89,7 +89,7 @@ Install-Module -Name PSScriptAnalyzer
 
 # Once installed let it analyze your PSM1 file, which should handle the module.
 
-Invoke-ScriptAnalyzer -Path ./ArcaneBooks.psm1
+Invoke-ScriptAnalyzer -Path ArcaneBooks.psm1
 
 # Repair any errors until it produces no errors
 
@@ -121,7 +121,7 @@ Import-Module PowerShellGet
 # Note, the apikey will be empty on GitHub, as they are sensitive.
 # If you are using this as a template use your own.
 
-$arcaneBooksApiKey = 'insert-key-here'
+$arcaneBooksApiKey = 'yourkeyhere'
 
 # Be aware the folder the psm1 file is in must have the same name as the module
 Publish-Module `
@@ -137,9 +137,6 @@ Publish-Module `
 #------------------------------------------------------------------------------------------------
 
 # Once all tests pass, you can publish for real.
-
-Remove-Module PowerShellGet
-Import-Module C:\Users\arcan\Documents\PowerShell\Modules\PowerShellGet
 
 Publish-Module `
     -Path "D:\OneDrive\PSCore\ArcaneBooks\ArcaneBooks\ArcaneBooks" `

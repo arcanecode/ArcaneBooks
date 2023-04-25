@@ -30,7 +30,7 @@ Import-Module PlatyPS
 # You need to be in the actual Code folder for things such as Removing or Importing the module,
 # generating help, etc to work. So I added a quick change to the Code folder here, mostly
 # so I don't forget.
-Set-Location .\Code
+Set-Location .\ArcaneBooks
 
 # Before running, you need to have the most current version of ArcaneBooks loaded in memory
 Remove-Module ArcaneBooks -ErrorAction SilentlyContinue
@@ -58,7 +58,7 @@ Import-Module .\ArcaneBooks
   updates for descriptions. So I used it once, to generate a list of everything, then removed
   it from the parameters. From here on it'll get manually updated.
 -----------------------------------------------------------------------------------------------#>
-$docPath = ".\Help"
+$docPath = "./Help"
 New-MarkdownHelp -Module ArcaneBooks `
                  -OutputFolder $docPath `
                  -Force `

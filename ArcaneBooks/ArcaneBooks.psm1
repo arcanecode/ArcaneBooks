@@ -20,19 +20,7 @@
 . "$PSScriptRoot/Functions/Class_LCCNBook.ps1"
 
 # Run the scripts to load the functions into memory
-. "$PSScriptRoot/Functions/Show-AboutArcaneBooks.ps1"
-. "$PSScriptRoot/Functions/Show-AboutFunctions.ps1"
 . "$PSScriptRoot/Functions/Get-ISBNBookData.ps1"
 . "$PSScriptRoot/Functions/Get-LCCNBookData.ps1"
 . "$PSScriptRoot/Functions/Open-ABGitHub.ps1"
 . "$PSScriptRoot/Functions/Open-AboutArcaneCode.ps1"
-
-#-----------------------------------------------------------------------------#
-# Export our functions
-#-----------------------------------------------------------------------------#
-# Export-ModuleMember Show-AboutArcaneBooks
-# Export-ModuleMember Get-ISBNBookData
-# Export-ModuleMember Get-LCCNBookData
-# Export-ModuleMember Open-ABGitHub
-# Export-ModuleMember Open-AboutArcaneCode
-# Export-ModuleMember Show-AboutFunctions

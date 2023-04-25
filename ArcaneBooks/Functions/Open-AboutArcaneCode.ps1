@@ -28,7 +28,7 @@ This module may not be reproduced in whole or in part without
 the express written consent of the author.
 
 .LINK
-https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-AboutArcaneCode.md
+https://github.com/arcanecode/ArcaneBooks/blob/1ebe781951f1a7fdf19bb6731487a74fa12ad08b/ArcaneBooks/Help/Open-AboutArcaneCode.md
 
 .LINK
 http://arcanecode.me
@@ -36,7 +36,7 @@ http://arcanecode.me
 
 function Open-AboutArcaneCode()
 {
-  [CmdletBinding()]
+  [CmdletBinding(HelpUri="https://github.com/arcanecode/ArcaneBooks/blob/1ebe781951f1a7fdf19bb6731487a74fa12ad08b/ArcaneBooks/Help/Open-AboutArcaneCode.md")]
   [alias("oac")]
   param (
         )

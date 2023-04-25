@@ -28,7 +28,7 @@ This module may not be reproduced in whole or in part without
 the express written consent of the author.
 
 .LINK
-https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-ABGitHub.md
+https://github.com/arcanecode/ArcaneBooks/blob/1ebe781951f1a7fdf19bb6731487a74fa12ad08b/ArcaneBooks/Help/Open-ABGitHub.md
 
 .LINK
 http://arcanecode.me
@@ -36,7 +36,7 @@ http://arcanecode.me
 
 function Open-ABGitHub()
 {
-  [CmdletBinding()]
+  [CmdletBinding(HelpURI="https://github.com/arcanecode/ArcaneBooks/blob/1ebe781951f1a7fdf19bb6731487a74fa12ad08b/ArcaneBooks/Help/Open-ABGitHub.md")]
   [alias("ogit")]
   param (
         )

@@ -1,30 +1,27 @@
-# Show-AboutArcaneBooks
+# Open-ABGitHub
 
 ## SYNOPSIS
 
-This function does nothing more than display additional information about the ArcaneBooks module.
+Opens the GitHub site in the default browser for the ArcaneBooks module.
 
 ## SYNTAX
 
 ```powershell
-Show-AboutArcaneBooks [<CommonParameters>]
+Open-ABGitHub [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Simply displays additional information on where users can find more information on the ArcaneBooks module.
-
-The displayed data comes from the Data-AboutMessage.txt file in the Internal folder.
+This function provides a quick and easy way to open the github site containing the code for this module.
+It also has documentation in markdown format to provide further explanations of the ArcaneBook modules functionality.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
 ```powershell
-Show-AboutArcaneBooks
+Open-ABGitHub
 ```
-
-Shows the info about this module.
 
 ## PARAMETERS
 
@@ -38,11 +35,11 @@ This cmdlet has no inputs.
 
 ## OUTPUTS
 
-There are no outputs for this cmdlet
+Opens the github site for this module in your default browser.
 
 ## NOTES
 
-ArcaneBooks - Show-AboutArcaneBooks.ps1
+ArcaneBooks - Open-ABGitHub.ps1
 
 Author: Robert C Cain | [@ArcaneCode](https://twitter.com/arcanecode) | arcane@arcanetc.com
 
@@ -56,6 +53,6 @@ the express written consent of the author.
 
 ## RELATED LINKS
 
-[w-AboutArcaneBooks](https://github.com/arcanecode/ArcaneBooks/blob/master/Documentation/Show-AboutArcaneBooks.md)
+[https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-ABGitHub.md](https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-ABGitHub.md)
 
 [ArcaneCode's Website](http://arcanecode.me)

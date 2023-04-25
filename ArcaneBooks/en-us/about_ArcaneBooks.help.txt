@@ -1,0 +1,65 @@
+
+about_ArcaneBooks
+
+SHORT DESCRIPTION
+   Retrieves book metadata based on the ISBN or LCCN.
+
+LONG DESCRIPTION
+   This module is designed to retrieve metadata for books based on either the
+   ISBN or the LCCN (Library of Congress Catalog Number). It will return data
+   such as the book title, author, and more.
+
+   To see a list of functions, please use "Get-Help about_ABFunctions".
+
+   In addition each cmdlet has help, you can use the Get-Help feature of
+   PowerShell to learn more about each one.
+
+BACKGROUND
+   The author (Robert Cain aka ArcaneCode) is a member of the Alabama
+   Historical Radio Society(https://alhrs.org/). They are beginning a project
+   to create metadata for their library (title, author, publisher, etc.) and
+   store it in cloud based software.
+
+   Naturally we want to automate as much of this as possible, since the
+   collection is rather extensive. Some of our books are so old they have
+   neither an ISBN or a Library of Congress Catalog Number (LCCN for short).
+   Those will require manual intervention to key in the data.
+
+   Fortunately many of the books have the LCCN, the newer books have an ISBN,
+   and a very few have both.
+
+   The goal with this project was to allow a user to create a simple text file
+   using notepad, Excel, or something similar. The user can enter an LCCN into
+   one file or the ISBN in another.
+
+   That data file will be piped through the appropriate cmdlets found in this
+   module and produce a list of metadata for each book including things such
+   as the book title, author, publication date, and the like.
+
+   This output can then be piped into standard PowerShell cmdlets to output
+   the data to formats such as CSV, XML, JSON, and the like.
+
+   The sources used in this module are the Library of Congress or the
+   Open Library site, which is part of the Internet Archive. Both provide
+   web APIs that can use to retrieve data.
+
+   For more information, please see the online documentation at the projects
+   GitHub site, https://github.com/arcanecode/ArcaneBooks .
+
+NOTE
+   Author: Robert C Cain | @ArcaneCode | arcane@arcanetc.com
+
+   This code is Copyright (c) 2023 Robert C Cain All rights reserved
+
+   The code herein is for demonstration purposes. No warranty or guarantee
+   is implied or expressly granted.
+
+   This module may not be reproduced in whole or in part without the express
+   written consent of the author.
+
+SEE ALSO
+     https://github.com/arcanecode/ArcaneBooks
+     https://arcanecode.com/info/
+
+KEYWORDS
+     ArcaneBooks, ISBN, LCCN
