@@ -121,7 +121,7 @@ Import-Module PowerShellGet
 # Note, the apikey will be empty on GitHub, as they are sensitive.
 # If you are using this as a template use your own.
 
-$arcaneBooksApiKey = 'yourkeyhere'
+$arcaneBooksApiKey = 'your key here'
 
 # Be aware the folder the psm1 file is in must have the same name as the module
 Publish-Module `

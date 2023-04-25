@@ -131,6 +131,9 @@ Get-Help about_ArcaneBooks
 # Display the list of functions
 Get-Help about_ABFunctions
 
+# Show Usage Notes
+Get-Help about_ABUsage
+
 # Open the GitHub site for this project in your default browser
 Open-ABGitHub
 
