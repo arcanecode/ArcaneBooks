@@ -53,6 +53,6 @@ the express written consent of the author.
 
 ## RELATED LINKS
 
-[https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-ABGitHub.md](https://github.com/arcanecode/ArcaneBooks/blob/main/Code/Help/Open-ABGitHub.md)
+[https://github.com/arcanecode/ArcaneBooks/blob/1ebe781951f1a7fdf19bb6731487a74fa12ad08b/ArcaneBooks/Help/Open-ABGitHub.md](https://github.com/arcanecode/ArcaneBooks/blob/1ebe781951f1a7fdf19bb6731487a74fa12ad08b/ArcaneBooks/Help/Open-ABGitHub.md)
 
 [ArcaneCode's Website](http://arcanecode.me)

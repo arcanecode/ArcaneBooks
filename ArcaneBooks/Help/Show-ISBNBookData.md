@@ -1,19 +1,21 @@
-# Get-ISBNBookData
+# Show-ISBNBookData
 
 ## SYNOPSIS
 
-Gets book data from OpenLibrary.org based on the ISBN
+Opens the website OpenLibrary.org for the ISBN passed in.
 
 ## SYNTAX
 
 ```powershell
-Get-ISBNBookData [-ISBN] <String> [<CommonParameters>]
+Show-ISBNBookData [-ISBN] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Uses the more advanced API at OpenLibrary to retrieved detailed information
-based on the 10 or 13 character ISBN passed in.
+This will open the website OpenLibrary.org for the ISBN(s) passed in,
+using your default browser.
+This will allow you an easy way to compare
+the output of Get-ISBNBookData with the OpenLibrary website.
 
 ## EXAMPLES
 
@@ -22,8 +24,7 @@ based on the 10 or 13 character ISBN passed in.
 ```powershell
 # Pass in a single ISBN as a parameter
 $ISBN = '0-87259-481-5'
-$bookData = Get-ISBNBookData -ISBN $ISBN
-$bookData
+Show-ISBNBookData -ISBN $ISBN
 ```
 
 ### EXAMPLE 2
@@ -31,8 +32,7 @@ $bookData
 ```powershell
 # Pipe in a single ISBN
 $ISBN = '0-87259-481-5'
-$bookData = $ISBN | Get-ISBNBookData
-$bookData
+$ISBN | Show-ISBNBookData
 ```
 
 ### EXAMPLE 3
@@ -51,13 +51,8 @@ $ISBNs = @( '0-87259-481-5'
           , '0-914126-02-4'
           , '978-1-4842-5930-6'
           )
-$bookData = $ISBNs | Get-ISBNBookData -Verbose
-$bookData
+$ISBNs | Show-ISBNBookData -Verbose
 ```
-
-Property | Value
-| ----- | ------ |
-$bookData | Select-Object -Property ISBN, Title
 
 ## PARAMETERS
 
@@ -89,34 +84,11 @@ Via the pipeline this cmdlet can accept an array of ISBN values.
 
 ## OUTPUTS
 
-The cmdlet returns one or more objects of type Class ISBNBook with the
-following properties. Note that not all properties may be present, it
-depends on what data the publisher provided.
-
-Property | Description
-| ----- | ------ |
-ISBN | The ISBN number that was passed in, complete with an formatting
-ISBN10 | ISBN as 10 digits
-ISBN13 | ISBN in 13 digit format
-Title | The title of the book
-LCCN | Library of Congress Catalog Number
-Author | The author(s) of the book
-ByStatement | The written by statement provided by the publisher
-NumberOfPages | Number of pages in the book
-Publishers | The Publisher(s) of this book
-PublishDate | The publication date for this edition of the book
-PublisherLocation | The location of the publisher
-Subject | Generic subject(s) for the work
-LibraryOfCongressClassification | Specialized classification used by Library of Congress
-DeweyDecimalClass | Dewey Decimal number
-Notes | Any additional information provided by the publisher
-CoverUrlSmall | URL link to an image of the book cover, in a small size
-CoverUrlMedium | URL link to an image of the book cover, in a medium size
-CoverUrlLarge | URL link to an image of the book cover, in a large size
+The cmdlet returns no data, it just opens up OpenLibrary in your web browser.
 
 ## NOTES
 
-ArcaneBooks - Get-ISBNBookData.ps1
+ArcaneBooks - Show-ISBNBookData.ps1
 
 Author: Robert C Cain | [@ArcaneCode](https://twitter.com/arcanecode) | arcane@arcanetc.com
 

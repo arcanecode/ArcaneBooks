@@ -83,6 +83,37 @@ $bookData
 $bookData | Select-Object -Property ISBN, Title
 
 #------------------------------------------------------------------------------------------------
+# Open ISBN on the Open Library Site
+#------------------------------------------------------------------------------------------------
+# Pass in a single ISBN as a parameter
+$ISBN = '0-87259-481-5'
+Show-ISBNBookData -ISBN $ISBN -Verbose
+
+# Test Alias
+$ISBN = '0-87259-481-5'
+sisbn -ISBN $ISBN -Verbose
+
+# Pipe in a single ISBN
+$ISBN = '0-87259-481-5'
+$ISBN | Show-ISBNBookData -Verbose
+
+# Pipe in an array of ISBNs
+$ISBNs = @( '0-87259-481-5'
+          , '0-8306-7801-8'
+          , '0-8306-6801-2'
+          , '0-672-21874-7'
+          , '0-07-830973-5'
+          , '978-1418065805'
+          , '1418065803'
+          , '978-0-9890350-5-7'
+          , '1-887736-06-9'
+          , '0-914126-02-4'
+          , '978-1-4842-5930-6'
+          )
+$ISBNs | Show-ISBNBookData -Verbose
+
+
+#------------------------------------------------------------------------------------------------
 # Working with LCCNs
 #------------------------------------------------------------------------------------------------
 
@@ -125,6 +156,9 @@ $bookData | Select-Object -Property LCCNReformatted, Subject, LibraryOfCongressC
 Remove-Module ArcaneBooks -ErrorAction SilentlyContinue
 Import-Module D:\OneDrive\PSCore\ArcaneBooks\ArcaneBooks\ArcaneBooks\ArcaneBooks -Verbose
 
+# Display information about Get-ISBNBookData
+Get-Help Get-ISBNBookData -Full
+
 # Display information about this module
 Get-Help about_ArcaneBooks
 
@@ -145,3 +179,6 @@ Open-AboutArcaneCode
 
 # alias
 oac
+
+# Show-ISBNBookData
+Get-Help Show-ISBNBookData -Full

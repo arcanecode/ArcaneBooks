@@ -3,7 +3,7 @@
 Gets book data from OpenLibrary.org based on the ISBN
 
 .DESCRIPTION
-Uses the more advanced API at OpenLibrary to retreived detailed informaiton
+Uses the more advanced API at OpenLibrary to retrieved detailed information
 based on the 10 or 13 character ISBN passed in.
 
 .PARAMETER ISBN

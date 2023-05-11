@@ -55,7 +55,8 @@
   FunctionsToExport = @( 'Get-ISBNBookData',
                          'Get-LCCNBookData',
                          'Open-ABGitHub',
-                         'Open-AboutArcaneCode'
+                         'Open-AboutArcaneCode',
+                         'Show-ISBNBookData'
                        )
 
   # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
@@ -68,7 +69,8 @@
   AliasesToExport = @( 'gisbn',
                        'glccn',
                        'ogit',
-                       'oac'
+                       'oac',
+                       'sisbn'
                      )
 
   # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
