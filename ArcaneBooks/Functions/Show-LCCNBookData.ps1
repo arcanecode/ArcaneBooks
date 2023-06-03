@@ -62,37 +62,43 @@ https://github.com/arcanecode/ArcaneBooks/blob/1ebe781951f1a7fdf19bb6731487a74fa
 .LINK
 http://arcanecode.me
 #>
-function Show-ISBNBookData
+function Show-LCCNBookData
 {
   [CmdletBinding(HelpURI="https://github.com/arcanecode/ArcaneBooks/blob/1ebe781951f1a7fdf19bb6731487a74fa12ad08b/ArcaneBooks/Help/Get-ISBNBookData.md")]
-  [alias("sisbn")]
+  [alias("slccn")]
   param (
          [Parameter( Mandatory = $true,
                      ValueFromPipeline = $true,
-                     HelpMessage = 'Please enter the ISBN.'
+                     HelpMessage = 'Please enter the LCCN (Library of Congress Control Number).'
                      )]
-         [string] $ISBN
+         [string] $LCCN
         )
 
   process
   {
-    foreach($number in $ISBN)
+    foreach($number in $LCCN)
     {
-      Write-Verbose "Beginning Show-ISBNBookData for $ISBN at $(Get-Date).ToString('yyyy-MM-dd hh:mm:ss tt')"
+      Write-Verbose "Beginning Show-LCCNBookData for $ISBN at $(Get-Date).ToString('yyyy-MM-dd hh:mm:ss tt')"
 
-      $isbnFormatted = $ISBN.Replace('-', '').Replace(' ', '')
-      $baseURL = "https://openlibrary.org/isbn/"
+      $lccnCleaned = $LCCN.Replace('-', '').Replace(' ', '')
+      $lccnPrefix = $lccnCleaned.Substring(0,2)
+      $lccnPadded = $lccnCleaned.Substring(2).PadLeft(6, '0')
 
-      $url = "$($baseURL)$($isbnFormatted)"
+      # Now combine the reformatted LCCN and save it as a property
+      $lccnFormatted ="$($lccnPrefix)$($lccnPadded)"
 
-      Write-Verbose 'Opening the Book on OpenLibrary'
+      $baseURL = "https://lccn.loc.gov/"
+
+      $url = "$($baseURL)$($lccnFormatted)"
+
+      Write-Verbose 'Opening the Book on Library of Congress Number'
 
       Start-Process $url
 
-      Write-Verbose "Finished Getting Data for $($ISBN)"
+      Write-Verbose "Finished Getting Data for $($LCCN)"
     }
 
-    Write-Verbose "Done opening the web pages at OpenLibrary"
+    Write-Verbose "Done opening the web pages at Library of Congress"
 
   }
 

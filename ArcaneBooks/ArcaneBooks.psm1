@@ -25,3 +25,4 @@
 . "$PSScriptRoot/Functions/Open-ABGitHub.ps1"
 . "$PSScriptRoot/Functions/Open-AboutArcaneCode.ps1"
 . "$PSScriptRoot/Functions/Show-ISBNBookData.ps1"
+. "$PSScriptRoot/Functions/Show-LCCNBookData.ps1"

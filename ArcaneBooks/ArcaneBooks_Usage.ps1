@@ -151,6 +151,37 @@ $bookData
 $bookData | Select-Object -Property LCCNReformatted, Subject, LibraryOfCongressClassification, Title
 
 #------------------------------------------------------------------------------------------------
+# Open LCCN on the LOC website
+#------------------------------------------------------------------------------------------------
+
+Remove-Module ArcaneBooks -ErrorAction SilentlyContinue
+Import-Module D:\OneDrive\PSCore\ArcaneBooks\ArcaneBooks\ArcaneBooks\ArcaneBooks -Verbose
+
+# Pass in a single LCCN as a parameter
+$LCCN = '54009698'
+Show-LCCNBookData -LCCN $LCCN -Verbose
+
+# Alias
+$LCCN = '54009698'
+slccn -LCCN $LCCN -Verbose
+
+# Pipe in a single ISBN
+$LCCN = '54-9698'
+$LCCN | Show-LCCNBookData
+
+.EXAMPLE
+# Pipe in an array of LCCNs
+$LCCNs = @( '54-9698'
+          , '40-33904'
+          , '41-3345'
+          , '64-20875'
+          , '74-75450'
+          , '76-190590'
+          , '71-120473'
+          )
+$LCCNs | Show-LCCNBookData -Verbose
+
+#------------------------------------------------------------------------------------------------
 # Informational Functions and Help
 #------------------------------------------------------------------------------------------------
 Remove-Module ArcaneBooks -ErrorAction SilentlyContinue

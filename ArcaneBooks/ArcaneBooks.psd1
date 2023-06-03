@@ -34,7 +34,7 @@
   Description = 'This module has cmdlets to retreive a books metadata (title, author, etc) based on either the ISBN or LCCN (Library of Congress Control Number)'
 
   # Version number for the module
-  ModuleVersion = '0.9.11'
+  ModuleVersion = '0.9.12'
 
   # Minimum version of PowerShell needed to run this module
   PowerShellVersion = '7.0'
@@ -56,7 +56,8 @@
                          'Get-LCCNBookData',
                          'Open-ABGitHub',
                          'Open-AboutArcaneCode',
-                         'Show-ISBNBookData'
+                         'Show-ISBNBookData',
+                         'Show-LCCNBookData'
                        )
 
   # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
@@ -70,7 +71,8 @@
                        'glccn',
                        'ogit',
                        'oac',
-                       'sisbn'
+                       'sisbn',
+                       'slccn'
                      )
 
   # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
